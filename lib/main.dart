@@ -48,6 +48,8 @@ class _MyHomeState extends State<MyHome> {
     setState(() {
       _transactions.add(newTransaction);
     });
+
+    Navigator.of(context).pop();
   }
 
   _openTransaciontFormModal(BuildContext context) {
