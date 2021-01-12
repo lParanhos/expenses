@@ -55,12 +55,19 @@ class MyHome extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Colors.black,
+                        color: Colors.purple,
                         width: 2,
                       ),
                     ),
                     padding: EdgeInsets.all(10),
-                    child: Text(tr.value.toString()),
+                    child: Text(
+                      tr.value.toString(),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.purple,
+                      ),
+                    ),
                   ),
                   Column(
                     children: [
