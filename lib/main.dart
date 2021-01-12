@@ -11,6 +11,11 @@ class Expenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        // passa todas as variações da cor e o wdget utiliza conforme quer
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+      ),
       home: MyHome(),
     );
   }
