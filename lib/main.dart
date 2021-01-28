@@ -105,6 +105,15 @@ class _MyHomeState extends State<MyHome> {
         ),
       ),
       actions: [
+        if (isLandscape)
+          IconButton(
+            icon: Icon(_showChart ? Icons.list : Icons.show_chart),
+            onPressed: () {
+              setState(() {
+                _showChart = !_showChart;
+              });
+            },
+          ),
         IconButton(
           icon: Icon(Icons.add),
           onPressed: () => _openTransaciontFormModal(context),
@@ -121,7 +130,7 @@ class _MyHomeState extends State<MyHome> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            if (isLandscape)
+            /*  if (isLandscape)
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -135,7 +144,7 @@ class _MyHomeState extends State<MyHome> {
                     },
                   ),
                 ],
-              ),
+              ), */
             if (_showChart || !isLandscape)
               Container(
                 height: availableHeight * (isLandscape ? 0.7 : 0.3),
